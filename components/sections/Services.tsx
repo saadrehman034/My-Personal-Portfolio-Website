@@ -77,7 +77,7 @@ export function Services() {
                     {Icon && (
                       <Icon
                         className="w-6 h-6"
-                        style={{ color: service.accentColor }}
+                        {...({ style: { color: service.accentColor } } as any)}
                       />
                     )}
                   </div>
