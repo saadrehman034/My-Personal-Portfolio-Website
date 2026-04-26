@@ -104,17 +104,23 @@ function ProjectCard({
       className="group relative rounded-2xl border border-border bg-card/50 overflow-hidden card-hover"
     >
       {/* Gradient header */}
-      <div
-        className={`h-36 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}
-      >
-        <div className="absolute inset-0 bg-grid opacity-30" />
-        {/* Category tag */}
-        <div className="absolute top-4 left-4">
-          <span className="px-2.5 py-1 rounded-lg text-xs font-semibold bg-black/30 text-white/90 backdrop-blur-sm border border-white/10">
-            {project.categoryLabel}
-          </span>
-        </div>
-      </div>
+     <div className="h-40 relative overflow-hidden">
+  <img
+    src={project.image}
+    alt={project.title}
+    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+  />
+
+  {/* overlay */}
+  <div className="absolute inset-0 bg-black/40" />
+
+  {/* category tag */}
+  <div className="absolute top-4 left-4">
+    <span className="px-2.5 py-1 rounded-lg text-xs font-semibold bg-black/40 text-white backdrop-blur-sm border border-white/10">
+      {project.categoryLabel}
+    </span>
+  </div>
+</div>
 
       {/* Content */}
       <div className="p-5">

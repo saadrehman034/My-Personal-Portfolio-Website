@@ -11,12 +11,14 @@ export interface Project {
   techStack: string[];
   featured: boolean;
   gradient: string;
+  image: string;
 }
 
 export const projects: Project[] = [
   {
     slug: "ai-lead-qualification-agent",
     title: "AI Lead Qualification Agent",
+    image: "/projects/ai-agent.png",
     category: "ai-agents",
     categoryLabel: "AI Agents",
     result: "Reduced manual review by 80%",
@@ -35,6 +37,7 @@ export const projects: Project[] = [
   {
     slug: "ecommerce-automation-suite",
     title: "E-commerce Automation Suite",
+    image: "/projects/site.png",
     category: "automation",
     categoryLabel: "Automation",
     result: "Saved 20hrs/week of manual work",
@@ -53,6 +56,7 @@ export const projects: Project[] = [
   {
     slug: "saas-analytics-dashboard",
     title: "SaaS Analytics Dashboard",
+    image: "/projects/saas.png",
     category: "full-stack",
     categoryLabel: "Full Stack",
     result: "Full-stack product for a B2B client",
@@ -71,6 +75,7 @@ export const projects: Project[] = [
   {
     slug: "custom-gpt-customer-support",
     title: "Custom GPT Support Bot",
+    image: "/projects/chatbot.png",
     category: "ai-agents",
     categoryLabel: "AI Agents",
     result: "Deployed for a 50k-user customer base",
@@ -86,4 +91,43 @@ export const projects: Project[] = [
     featured: false,
     gradient: "from-orange-500/20 to-red-500/20",
   },
+    {
+  slug: "blog-writing-ai-agent",
+  title: "AI Blog Writing Agent",
+  image: "/projects/blog.png",
+  category: "ai-agents",
+  categoryLabel: "AI Agents",
+  result: "Increased content output by 6x for marketing teams",
+  description:
+    "An AI-powered writing assistant that generates SEO-optimized blog posts, outlines, and content ideas tailored to brand tone and audience.",
+  problem:
+    "A marketing team struggled to consistently produce high-quality blog content at scale, leading to missed publishing deadlines and weak SEO performance.",
+  solution:
+    "Built an LLM-powered blog writing agent using OpenAI with a structured prompt pipeline for ideation, outlining, drafting, and SEO optimization. Integrated with a CMS for direct publishing workflows.",
+  outcome:
+    "Increased content production by 6x, reduced writing time per article from 6 hours to 45 minutes, and improved organic traffic by 40% in 3 months.",
+  techStack: ["OpenAI", "LangChain", "Next.js", "Node.js", "Notion API", "Python"],
+  featured: true,
+  gradient: "from-blue-500/20 to-indigo-500/20",
+},
+
+{
+  slug: "ai-voice-agent",
+  title: "AI Voice Support Agent",
+  image: "/projects/voice.png",
+  category: "ai-agents",
+  categoryLabel: "AI Agents",
+  result: "Handled 70% of inbound calls without human agents",
+  description:
+    "A real-time conversational AI voice agent capable of understanding, responding, and resolving customer queries over phone calls.",
+  problem:
+    "A customer service center faced high call volumes, long wait times, and expensive staffing requirements for 24/7 support coverage.",
+  solution:
+    "Developed a real-time AI voice agent using speech-to-text, LLM reasoning, and text-to-speech pipelines. Integrated with Twilio for telephony and backend CRM systems for context-aware responses.",
+  outcome:
+    "Automated 70% of inbound support calls, reduced average wait time from 8 minutes to under 30 seconds, and cut operational costs by 55%.",
+  techStack: ["OpenAI", "Whisper", "Twilio", "ElevenLabs", "Node.js", "FastAPI"],
+  featured: true,
+  gradient: "from-green-500/20 to-emerald-500/20",
+}
 ];
